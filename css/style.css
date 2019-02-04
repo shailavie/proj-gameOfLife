@@ -1,0 +1,112 @@
+/*
+The game of life!
+*/
+
+body {
+    background-color: black;
+}
+
+
+table {
+    /* outline: 1px solid blue; */
+    border-color: lightgray;
+    outline: 1px solid white;
+    border-collapse: collapse;
+    /* width:100%; */
+}
+
+.saved-pattern {
+    color: white;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.input {
+    background-color: gray;
+    padding: 15px;
+    border-radius: 15px;
+    
+} 
+
+.input :focus {
+    background-color: lightgray;
+}
+
+::placeholder {
+    color: white;
+    font-size: 1.5em;
+  }
+
+h5 {
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+.item {
+    background-color: whitesmoke;
+    font-size: 16px;
+}
+
+.board td {
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+}
+
+.board td:hover {
+    background-color: lightsalmon;
+}
+
+.mark {
+    background-color: red;
+}
+
+.button {
+    align-content: center;
+    text-align: center;
+    padding: 30px;
+    display: 'block';
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: transparent;
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover{
+    background-color: lightyellow;
+    color: black;
+
+}
+
+.controllers-container {
+    text-align: center;
+    left: 50%;
+    top: 50%;
+}
+
+
+
+.board-container {
+    text-align: center;
+    left: 50%;
+    top: 50%;
+}
+
+.board-inner-container {
+    display: inline-block;
+    margin: 10px;
+}
