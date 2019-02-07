@@ -435,7 +435,6 @@ function renderBoard(board) {
         for (var j = 0; j < board[0].length; j++) {
             var modelContent = gBoard[i][j];
             console.log(modelContent);
-            debugger;
             switch (modelContent.name) {
                 case 'LIFE':
                 case 'GOD':
