@@ -2,20 +2,43 @@
 The game of life!
 */
 
+
+* {
+box-sizing: border-box;
+}
+
 body {
     background-color: black;
+    margin: 0;
 }
 
+header {
+    height: 130px;
+    color: white;
+    margin-bottom: 30px;;
+}
 
 table {
-    /* outline: 1px solid blue; */
     border-color: lightgray;
-    outline: 1px solid white;
+    outline: 1px solid rgb(158, 157, 157);
     border-collapse: collapse;
-    /* width:100%; */
 }
 
+.board td {
+    width: 5px;
+    height: 5px;
+    font-size: 1px;
+    transition: .5s;
+    padding: 0;
+}
+
+.board td:hover {
+    background-color: lightsalmon;
+}
+
+
 .saved-pattern {
+    margin-top: 50px;
     color: white;
 }
 
@@ -27,9 +50,20 @@ h1 {
 
 .input {
     background-color: gray;
-    padding: 15px;
+    max-width: 180px;
+    padding: 8px;
     border-radius: 15px;
-    
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+    display: 'block';
+    border: 2px solid whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 15px;
 } 
 
 .input :focus {
@@ -38,8 +72,27 @@ h1 {
 
 ::placeholder {
     color: white;
-    font-size: 1.5em;
+    font-size: 16px;
   }
+
+.button {
+    width: 180px;
+    padding: 8px;
+    border-radius: 15px;
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+    display: 'block';
+    border: 2px solid whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
 
 h5 {
     color: whitesmoke;
@@ -53,38 +106,12 @@ h5 {
     font-size: 16px;
 }
 
-.board td {
-    width: 40px;
-    height: 40px;
-    transition: .5s;
-}
-
-.board td:hover {
-    background-color: lightsalmon;
-}
 
 .mark {
     background-color: red;
 }
 
-.button {
-    align-content: center;
-    text-align: center;
-    padding: 30px;
-    display: 'block';
-    border: 2px solid whitesmoke;
-    border-radius: 15px;
-    padding: 8px;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: whitesmoke;
-    font-size: 16px;
-    background-color: transparent;
-    margin: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
+
 
 .button:hover{
     background-color: lightyellow;
@@ -92,21 +119,46 @@ h5 {
 
 }
 
-.controllers-container {
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
-    left: 50%;
-    top: 50%;
+}
+
+.controllers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 200px;
+    text-align: center;
+    margin-right: 50px;
 }
 
 
 
 .board-container {
+    display: flex;
     text-align: center;
-    left: 50%;
-    top: 50%;
+    align-items: center;
+ 
 }
 
 .board-inner-container {
     display: inline-block;
     margin: 10px;
+}
+
+
+.sep {
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+
+
+/* helpers */
+
+.flex {
+    display: flex
 }

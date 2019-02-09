@@ -12,40 +12,40 @@
 </head>
 
 <body onload="initGame()">
-    <h1>Game of Life</h1>
-    <h5 class="gen-count">Generations Count : 0</h5>
-    <h5 class="living-cells">Living Cells : </h5>
-    <div class="controllers-container">
+    <main class="main-container">
+        <section class="controllers-container">
+        <header>
+            <h1>Game of Life</h1>
+            <h5 class="gen-count">Generations Count : 0</h5>
+            <h5 class="living-cells">Living Cells : </h5>
+        </header>
             <button class="button" onclick="initGame()">Start Over</button>
-            <button class="button" onclick="switchRule(this)">Switch Rules</button>
-            <button class="button" onclick="toggleGame(this)">Pause</button>
-            <button class="button" onclick="cleanBoard()">Clean Board</button>
-            <button class="button" onclick="drawPatternByPosAndAngle()">Add patterns!</button>
-            <button class="button" onclick="savePattern()">Save Board</button>
-            <br/><br>
+            <button class="button" onclick="onSwitchRule(this)">Switch Rules</button>
+            <button class="button" onclick="onToggleGame(this)">Pause</button>
+            <button class="button" onclick="onCleanBoard()">Clean Board</button>
+            <button class="button" onclick="onDrawPatternByPosAndAngle()">Add patterns!</button>
+            <!-- <button class="button" onclick="onSavePattern()">Save Board</button> -->
             <input class="input1 input" type="number" placeholder="Board Size">
             <input class="input3 input" type="number" placeholder="Change Speed">
-            <!-- <input class="input2 input" type="number" placeholder="Change Revival count"> -->
-            <!-- <input class="input4 input" type="number" placeholder="Change Min Neighbors"> -->
-            <!-- <input class="input5 input" type="number" placeholder="Change Max Neighbors"> -->
-            <br/>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="board-container">
-        <div class="board-inner-container">
-            <table border="0.5" cellpadding="10">
-                <tbody class="board"></tbody>
-            </table>
+            <div class="sep"></div>
+        </section>
+
+        <div class="board-container">
+            <div class="board-inner-container">
+                <table border="0.5" cellpadding="10">
+                    <tbody class="board"></tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="saved-pattern"></div>
-    <script src="js/game.js"></script>
+        <div class="saved-pattern"></div>
+    </main>
+    <footer>
+        <h5>Game of Life 2019 - Created by <a href="mailt:shai.lavie@gmail.com"> Shai L</a> </h5>
+    </footer>
+    <script src="js/util.js"></script>
+    <script src="js/app-service-model.js"></script>
+    <script src="js/app-service.js"></script>
+    <script src="js/app-controler.js"></script>
 </body>
 
 </html>
